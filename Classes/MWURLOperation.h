@@ -64,7 +64,7 @@
 @property (nonatomic, readonly) MWURLOperationSize responseExpectedSize;
 @property (nonatomic, readonly) double responsePercentComplete;
 
-// connection data
+// connection state
 @property (nonatomic, retain) NSURLConnection *connection;
 @property (nonatomic, readonly) BOOL connectionStarted;
 @property (nonatomic, readonly) BOOL connectionActive;
@@ -92,10 +92,14 @@
 +(NSString *)HTTPMethodNameForRequestType:(MWURLOperationRequestType)requestType;
 -(NSString *)HTTPMethodName;
 
+// background threads
 +(NSThread  *)backgroundThread;
 +(NSRunLoop *)backgroundRunLoop;
 
 @end
+
+// These methods call through to the delegate and block callback APIs. You should
+// not call them directly, but you can override them in subclasses.
 
 @interface MWURLOperation (DelegateHandlers)
 
