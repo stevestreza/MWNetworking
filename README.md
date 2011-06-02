@@ -29,6 +29,13 @@ Wish List
 * More easy-to-use configuration options (e.g. setUserAgent: or setEntityTag:, as opposed to setting those headers manually)
 * Saving downloads directly to disk, being able to query for their data later, and file caching
 
+Attribution
+===========
+
+This project includes the following open-source code:
+
+* NSData+Base64, from Colloquy (Kyle Hammond, Timothy Hatcher, and Dave Winer)
+
 License
 =======
 
