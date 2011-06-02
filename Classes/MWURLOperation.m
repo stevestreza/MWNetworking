@@ -110,7 +110,6 @@ static NSUInteger sRunningOperationCount = 0;
 
 - (void)dealloc
 {
-    NSLog(@"Releasing operation for %@",_requestURL);
 #define MWRelease(_item) do{ [(_item) release], _item = nil; }while(0)
     MWRelease(_userInfo);
     MWRelease(_delegate);
@@ -217,7 +216,6 @@ static NSUInteger sRunningOperationCount = 0;
         }
         
         if(self.requestData){
-            NSLog(@"USing request data: %@", [[[NSString alloc] initWithData:self.requestData encoding:NSUTF8StringEncoding] autorelease]);
             [request setHTTPBody:self.requestData];
         }
         
@@ -316,7 +314,6 @@ static NSUInteger sRunningOperationCount = 0;
 
 -(id)parseResponseData{
     NSString *contentType = [[self responseHeaders] objectForKey:@"Content-Type"];
-    NSLog(@"Going for content type %@",[self responseHeaders]);
     NSData *data = [self responseData];
     id object = [[self class] objectForData:data withContentType:contentType];
     
@@ -384,7 +381,6 @@ static NSUInteger sRunningOperationCount = 0;
     NSThread *currentThread = [NSThread currentThread];
     while(![currentThread isCancelled] && sRunningOperationCount){
         NSAutoreleasePool *innerPool = [NSAutoreleasePool new];
-        NSLog(@"Tick");
         [runLoop runMode:kMWURLOperationRunLoopMode beforeDate:[NSDate distantFuture]];   
         [innerPool release];
     }
@@ -442,7 +438,7 @@ static NSUInteger sRunningOperationCount = 0;
     
 	[[NSNotificationCenter defaultCenter] postNotificationName:kMWURLOperationDidFinishDownloadingNotification object:self];
     
-	NSLog(@"TCDownload Error: %@",self.responseError);
+	NSLog(@"MWURLOperation Error: %@",self.responseError);
 	[self operationHadError:self.responseError];
     
 	[self willChangeValueForKey:@"isExecuting"];
@@ -496,8 +492,6 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
 @end
 
 @implementation MWURLOperation (DelegateHandlers)
-
-#define LogMe NSLog(@"%@", NSStringFromSelector(_cmd))
 
 -(void)operationDidBegin{
     if(self.respondOnMainThread && ![NSThread isMainThread]){
