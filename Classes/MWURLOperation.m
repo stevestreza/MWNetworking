@@ -30,6 +30,7 @@
 //
 
 #import "MWURLOperation.h"
+#import "NSData+Base64.h"
 
 #if TARGET_OS_IPHONE
 #define kMWURLOperationRunLoopMode NSDefaultRunLoopMode
@@ -42,6 +43,7 @@
 
 +(NSMutableDictionary *)_allObjectParsers;
 +(NSMutableDictionary *)_allDataParsers;
+-(void)_startConnection;
 
 @end
 
@@ -110,7 +112,7 @@ static NSUInteger sRunningOperationCount = 0;
 
 - (void)dealloc
 {
-#define MWRelease(_item) do{ [(_item) release], _item = nil; }while(0)
+#define MWRelease(_item) do{ [(NSObject *)(_item) release], _item = nil; }while(0)
     MWRelease(_userInfo);
     MWRelease(_delegate);
     MWRelease(_didBeginHandler);
@@ -119,7 +121,6 @@ static NSUInteger sRunningOperationCount = 0;
     MWRelease(_didErrorHandler);
     MWRelease(_request);
     MWRelease(_requestURL);
-    MWRelease(_requestType);
     MWRelease(_requestData);
     MWRelease(_requestBody);
     MWRelease(_requestHeaders);
@@ -141,7 +142,7 @@ static NSUInteger sRunningOperationCount = 0;
 
     [super main];
     
-    [self startConnection];
+    [self _startConnection];
 }
 
 -(void)_finish{
@@ -234,19 +235,6 @@ static NSUInteger sRunningOperationCount = 0;
         [_connection scheduleInRunLoop:[[self class] backgroundRunLoop] forMode:kMWURLOperationRunLoopMode];
     }
     return _connection;
-}
-
--(void)startConnection{
-    if(self.connectionStarted || self.connectionActive || self.connectionFinished) return;
-    
-    [self willChangeValueForKey:@"isExecuting"];
-    [self willChangeValueForKey:@"connectionStarted"];
-    _connectionStarted = YES;
-    [self  didChangeValueForKey:@"connectionStarted"];
-    [self  didChangeValueForKey:@"isExecuting"];
-
-    [[self connection] start];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kMWURLOperationDidBeginDownloadingNotification object:self];
 }
 
 #pragma mark Response Methods
@@ -588,6 +576,19 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
         sAllDataParsers = [[NSMutableDictionary alloc] init];
     });
     return sAllDataParsers;
+}
+
+-(void)_startConnection{
+    if(self.connectionStarted || self.connectionActive || self.connectionFinished) return;
+    
+    [self willChangeValueForKey:@"isExecuting"];
+    [self willChangeValueForKey:@"connectionStarted"];
+    _connectionStarted = YES;
+    [self  didChangeValueForKey:@"connectionStarted"];
+    [self  didChangeValueForKey:@"isExecuting"];
+    
+    [[self connection] start];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kMWURLOperationDidBeginDownloadingNotification object:self];
 }
 
 @end
