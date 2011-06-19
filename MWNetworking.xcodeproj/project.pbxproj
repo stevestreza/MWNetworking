@@ -10,22 +10,24 @@
 		1E5E0BB913AE8EA600A3B8CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BB813AE8EA600A3B8CF /* Cocoa.framework */; };
 		1E5E0BC313AE8EA600A3B8CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E5E0BC113AE8EA600A3B8CF /* InfoPlist.strings */; };
 		1E5E0BCB13AE8EA600A3B8CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BB813AE8EA600A3B8CF /* Cocoa.framework */; };
-		1E5E0BCE13AE8EA600A3B8CF /* MWNetworkingMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BB513AE8EA600A3B8CF /* MWNetworkingMac.framework */; };
+		1E5E0BCE13AE8EA600A3B8CF /* MWNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BB513AE8EA600A3B8CF /* MWNetworking.framework */; };
 		1E5E0BD413AE8EA600A3B8CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E5E0BD213AE8EA600A3B8CF /* InfoPlist.strings */; };
 		1E5E0BD913AE8EA600A3B8CF /* MWNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E0BD813AE8EA600A3B8CF /* MWNetworkingTests.m */; };
-		1E5E0BED13AE8ED700A3B8CF /* MWTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE813AE8ED700A3B8CF /* MWTypes.h */; };
-		1E5E0BEE13AE8ED700A3B8CF /* MWURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE913AE8ED700A3B8CF /* MWURLOperation.h */; };
+		1E5E0BED13AE8ED700A3B8CF /* MWTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE813AE8ED700A3B8CF /* MWTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E5E0BEE13AE8ED700A3B8CF /* MWURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE913AE8ED700A3B8CF /* MWURLOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E5E0BEF13AE8ED700A3B8CF /* MWURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E0BEA13AE8ED700A3B8CF /* MWURLOperation.m */; };
 		1E5E0BF913AE8FEF00A3B8CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BF813AE8FEF00A3B8CF /* Foundation.framework */; };
 		1E5E0C0413AE8FF000A3B8CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0C0313AE8FF000A3B8CF /* UIKit.framework */; };
 		1E5E0C0513AE8FF000A3B8CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BF813AE8FEF00A3B8CF /* Foundation.framework */; };
 		1E5E0C0713AE8FF000A3B8CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0C0613AE8FF000A3B8CF /* CoreGraphics.framework */; };
-		1E5E0C0A13AE8FF000A3B8CF /* libMWNetworkingIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BF713AE8FEF00A3B8CF /* libMWNetworkingIOS.a */; };
+		1E5E0C0A13AE8FF000A3B8CF /* libMWNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E0BF713AE8FEF00A3B8CF /* libMWNetworking.a */; };
 		1E83D26E13AE92EB00DE0DC7 /* MWURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E0BEA13AE8ED700A3B8CF /* MWURLOperation.m */; };
 		1E83D26F13AE93B200DE0DC7 /* MWNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E0BD813AE8EA600A3B8CF /* MWNetworkingTests.m */; };
 		1E83D27D13AE973E00DE0DC7 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83D27A13AE973D00DE0DC7 /* libOCMock.a */; };
 		1E83D27E13AE973E00DE0DC7 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83D27B13AE973D00DE0DC7 /* OCMock.framework */; };
 		1E83D28113AE97A500DE0DC7 /* OCMock.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83D27B13AE973D00DE0DC7 /* OCMock.framework */; };
+		1EDBFA0913AE9D4E00440AB3 /* MWTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE813AE8ED700A3B8CF /* MWTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EDBFA0A13AE9D5000440AB3 /* MWURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5E0BE913AE8ED700A3B8CF /* MWURLOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E5E0BB513AE8EA600A3B8CF /* MWNetworkingMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWNetworkingMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5E0BB513AE8EA600A3B8CF /* MWNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5E0BB813AE8EA600A3B8CF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1E5E0BBB13AE8EA600A3B8CF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1E5E0BBC13AE8EA600A3B8CF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -77,7 +79,7 @@
 		1E5E0BE813AE8ED700A3B8CF /* MWTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWTypes.h; path = Classes/MWTypes.h; sourceTree = SOURCE_ROOT; };
 		1E5E0BE913AE8ED700A3B8CF /* MWURLOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWURLOperation.h; path = Classes/MWURLOperation.h; sourceTree = SOURCE_ROOT; };
 		1E5E0BEA13AE8ED700A3B8CF /* MWURLOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWURLOperation.m; path = Classes/MWURLOperation.m; sourceTree = SOURCE_ROOT; };
-		1E5E0BF713AE8FEF00A3B8CF /* libMWNetworkingIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMWNetworkingIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5E0BF713AE8FEF00A3B8CF /* libMWNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMWNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5E0BF813AE8FEF00A3B8CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1E5E0BFC13AE8FEF00A3B8CF /* MWNetworkingIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWNetworkingIOS-Prefix.pch"; sourceTree = "<group>"; };
 		1E5E0C0213AE8FF000A3B8CF /* MWNetworkingIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWNetworkingIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5E0BCB13AE8EA600A3B8CF /* Cocoa.framework in Frameworks */,
-				1E5E0BCE13AE8EA600A3B8CF /* MWNetworkingMac.framework in Frameworks */,
+				1E5E0BCE13AE8EA600A3B8CF /* MWNetworking.framework in Frameworks */,
 				1E83D27E13AE973E00DE0DC7 /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +129,7 @@
 				1E5E0C0413AE8FF000A3B8CF /* UIKit.framework in Frameworks */,
 				1E5E0C0513AE8FF000A3B8CF /* Foundation.framework in Frameworks */,
 				1E5E0C0713AE8FF000A3B8CF /* CoreGraphics.framework in Frameworks */,
-				1E5E0C0A13AE8FF000A3B8CF /* libMWNetworkingIOS.a in Frameworks */,
+				1E5E0C0A13AE8FF000A3B8CF /* libMWNetworking.a in Frameworks */,
 				1E83D27D13AE973E00DE0DC7 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +151,9 @@
 		1E5E0BB613AE8EA600A3B8CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E5E0BB513AE8EA600A3B8CF /* MWNetworkingMac.framework */,
+				1E5E0BB513AE8EA600A3B8CF /* MWNetworking.framework */,
 				1E5E0BCA13AE8EA600A3B8CF /* MWNetworkingMacTests.octest */,
-				1E5E0BF713AE8FEF00A3B8CF /* libMWNetworkingIOS.a */,
+				1E5E0BF713AE8FEF00A3B8CF /* libMWNetworking.a */,
 				1E5E0C0213AE8FF000A3B8CF /* MWNetworkingIOSTests.octest */,
 			);
 			name = Products;
@@ -186,7 +188,8 @@
 				1E5E0BE913AE8ED700A3B8CF /* MWURLOperation.h */,
 				1E5E0BEA13AE8ED700A3B8CF /* MWURLOperation.m */,
 			);
-			path = MWNetworking;
+			name = MWNetworking;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		1E5E0BCF13AE8EA600A3B8CF /* Tests */ = {
@@ -294,6 +297,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDBFA0913AE9D4E00440AB3 /* MWTypes.h in Headers */,
+				1EDBFA0A13AE9D5000440AB3 /* MWURLOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +320,7 @@
 			);
 			name = MWNetworkingMac;
 			productName = MWNetworking;
-			productReference = 1E5E0BB513AE8EA600A3B8CF /* MWNetworkingMac.framework */;
+			productReference = 1E5E0BB513AE8EA600A3B8CF /* MWNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1E5E0BC913AE8EA600A3B8CF /* MWNetworkingMacTests */ = {
@@ -352,7 +357,7 @@
 			);
 			name = MWNetworkingIOS;
 			productName = MWNetworkingIOS;
-			productReference = 1E5E0BF713AE8FEF00A3B8CF /* libMWNetworkingIOS.a */;
+			productReference = 1E5E0BF713AE8FEF00A3B8CF /* libMWNetworking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		1E5E0C0113AE8FF000A3B8CF /* MWNetworkingIOSTests */ = {
@@ -568,7 +573,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Support/MWNetworking-Prefix.pch";
 				INFOPLIST_FILE = "Support/MWNetworking-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MWNetworking;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -586,7 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Support/MWNetworking-Prefix.pch";
 				INFOPLIST_FILE = "Support/MWNetworking-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MWNetworking;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -658,7 +663,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MWNetworking;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -674,7 +679,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MWNetworking;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

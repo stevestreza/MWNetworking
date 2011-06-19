@@ -382,9 +382,7 @@ static NSUInteger sRunningOperationCount = 0;
     [self backgroundThread];
     while(!sBackgroundRunLoop){
         usleep(1000);
-        NSLog(@"Waiting for a run loop");
     }
-    NSLog(@"We have a run loop");
     return sBackgroundRunLoop;
 }
 
@@ -395,7 +393,6 @@ static NSUInteger sRunningOperationCount = 0;
 -(NSURLRequest *)connection:(NSURLConnection *)connection
             willSendRequest:(NSURLRequest *)request
            redirectResponse:(NSURLResponse *)redirectResponse{
-    NSLog(@"Beginning operation for %@",[request URL]);
 	BOOL shouldReturn = [self operationShouldRedirectToURL:[request URL]];
 	[self operationDidBegin];
 	return (shouldReturn ? request : nil);
@@ -404,7 +401,6 @@ static NSUInteger sRunningOperationCount = 0;
 
 -(void)connection:(NSURLConnection *)conn didReceiveResponse:(NSHTTPURLResponse *)response{
 	_response = [response retain];
-    NSLog(@"Connection received response %i", (int)[response statusCode]);
 	
 	if([response statusCode] == 303 && [[response allHeaderFields] valueForKey:@"Location"]){
 		return;
@@ -457,7 +453,6 @@ static NSUInteger sRunningOperationCount = 0;
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:kMWURLOperationDidFinishDownloadingNotification object:self];
     
-    NSLog(@"Calling delegate that we're done: %@",self.delegate);
 	[self operationFinished];
 	
 	[self willChangeValueForKey:@"isExecuting"];
