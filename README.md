@@ -5,6 +5,7 @@ MWURLOperation is a simple NSOperation subclass for performing a network operati
 Features
 ========
 
+* Compatible with iOS 4.0+ and Mac OS X 10.6+
 * Asynchronous loading of URL resources
 * Completely self-contained object including the request and response
 * Simple blocks-based callback APIs
@@ -21,6 +22,26 @@ To Use
 5. Add the operation to an NSOperationQueue
 6. Query the operation for the response data in the completion block
 
+Example
+=======
+
+    NSOperationQueue *downloadQueue = ...;
+
+    ...
+
+	NSString *nyanCat = @"http://nyan.cat/images/nyancat.gif";
+	NSURL *nyanCatURL = [NSURL URLWithString:nyanCat];
+    __block MWURLOperation *operation = [[[MWURLOperation alloc] initWithURL:nyanCatURL] autorelease];
+    
+    operation.completionBlock = ^{
+        NSData *nyanCatData = operation.responseData;
+		UIImage *nyanCatImage = [UIImage imageWithData:nyanCatData];
+		// do something with nyanCatImage
+    };
+    
+    [downloadQueue addOperation:operation];
+
+
 Wish List
 =========
 
@@ -34,7 +55,8 @@ Attribution
 
 This project includes the following open-source code:
 
-* NSData+Base64, from Colloquy (Kyle Hammond, Timothy Hatcher, and Dave Winer)
+* NSData+Base64, from [Colloquy](http://colloquy.info) (Kyle Hammond, Timothy Hatcher, and Dave Winer)
+* Sample code URL from [nyan.cat](http://nyan.cat/)
 
 License
 =======
